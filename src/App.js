@@ -1,6 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 import React, {useState} from 'react'
 import Menu from "./components/Menu";
+import Usuarios from "./components/Usuarios";
+import Login from "./components/Login";
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Menu isLoged={userLogged}/>
+      <Login />
     </BrowserRouter>
   );
 }

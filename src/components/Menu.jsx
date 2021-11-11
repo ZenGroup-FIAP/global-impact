@@ -29,6 +29,7 @@ export default function Menu(props) {
                     <Route path="/projeto">
                         
                     </Route>
+                    <Route  path="/painel/{login}"/>
                 </Routes>
             </div>
         </>
