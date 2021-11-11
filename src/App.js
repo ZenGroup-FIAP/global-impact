@@ -1,8 +1,15 @@
+import { BrowserRouter } from "react-router-dom";
+import React, {useState} from 'react'
+import Menu from "./components/Menu";
+
+
 function App() {
+  const [userLogged, serUserLogged] = useState(false)
+
   return (
-    <div className="App">
-      <h1>Ola</h1>
-    </div>
+    <BrowserRouter>
+      <Menu isLoged={userLogged}/>
+    </BrowserRouter>
   );
 }
 
