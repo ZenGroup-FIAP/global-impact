@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from 'react'
 
 export default function Login(props) {
+    const [contaLogin, setLogin] = useState()
+    const [contaSenha, setSenha] = useState()
+    const [logado, setLogado] = useState("show")
+
+
     const [usuario, setUsuario] = useState({
         login: "",
         senha: ""
@@ -16,50 +21,59 @@ export default function Login(props) {
                 return resp.json()
             })
             .then((resp) => {
-                setListUsuarios(resp)
-                console.log(resp)  
+                setListUsuarios(resp) 
             })
             .catch((erro) => {
                 console.log(erro)
             }) 
     }, [])
 
-    const handleChange = e => {
-        setUsuario({...usuario,[e.target.name]: e.target.value})
+    const handleChangeLogin = (e) => {
+        setStatus(false)
+        listUsuarios.forEach(element => {
+            if (element.login === e.target.value) {
+                setLogin(e.target.value) 
+                setStatus(true)
+            }
+        })
+    }
+
+    const handleChangeSenha = (e) => {
+        setStatus(false)
+        listUsuarios.forEach(element => {
+            if (element.senha === e.target.value) {
+                setSenha(e.target.value)
+                setUsuario({
+                    login: contaLogin,
+                    senha: contaSenha
+                })
+                setStatus(true)
+            }
+        })
     }
 
     const handleSubmit = e => {
         e.preventDefault()
-
-        fetch("rest/usuario/"+usuario.login+"/"+usuario.senha, {
-            
-        }).then((resp) => {
-            return resp.json()
-        }).then((resp) => {
-            console.log(resp)
-            setStatus(resp)
-        })
-
+        console.log(status)
         if (status) {
-            listUsuarios.forEach((u) => {
-                if (u.login === usuario.login && u.senha === usuario.senha) {
-                    setUsuario(u)
+            listUsuarios.forEach(element => {
+                if (element.login === usuario.login) {
+                    setLogado("unshow")
+                    window.location = "/painel/" + element.id
                 }
             })
-
-            window.location = "/painel/" + usuario.login
+            props.isLogged = true
+        } else {
+            alert("Login ou senha invalidos...")
         }
-
-
-        console.log(usuario)
     }
     
     return (
-        <div>
+        <div className={logado}>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="login" placeholder="Login" onChange={handleChange} />
-                <input type="password" name="senha" placeholder="Senha" onChange={handleChange} />
+                <input type="text" name="login" placeholder="Login" onChange={handleChangeLogin} />
+                <input type="password" name="senha" placeholder="Senha" onChange={handleChangeSenha} />
                 <button type="submit">Entrar</button>
             </form>
         </div>
