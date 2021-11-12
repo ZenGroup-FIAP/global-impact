@@ -1,11 +1,33 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Routes, Link, Route} from 'react-router-dom'
 
 
 export default function Menu(props) {
+    let id = null
+    const [usuario, setUsuario] = useState([])
+
+    if (props.match.path.toLowerCase().includes('teste')) {
+        id = props.match.params.id
+    }
+
+    useEffect(() => {
+        fetch("/rest/usuario/" + id)
+            .then((resp) => {
+                return resp.json()
+            })
+            .then((resp) => {
+                setUsuario(resp)
+                console.log(resp)  
+            })
+            .catch((erro) => {
+                console.log(erro)
+            }) 
+    }, [])
+
     return (
         <>
             <header>
+                <p>{usuario.login}</p>
                 <nav>
                     <ul>
                         <li><Link to="/">HOME</Link></li>
@@ -29,7 +51,7 @@ export default function Menu(props) {
                     <Route path="/projeto">
                         
                     </Route>
-                    <Route  path="/painel/{login}"/>
+                    <Route  path="/painel/:id"/>
                 </Routes>
             </div>
         </>
