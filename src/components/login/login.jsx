@@ -1,28 +1,13 @@
 import React from 'react'
 
-export default function login() {
+export default function Login() {
     return (
-        <div>
-            <div>
-                <img src="null" alt="Logo do site"/>
-            </div>
-
-            <div>
-                <div>
-                    <p>usuario</p>
-                    <form action=""></form>
-                </div>
-
-                <div>
-                    <p>senha</p>
-                    <form action=""></form>
-                </div>
-
-                <a href="null">ENTRAR</a>
-                <a href="null">Esqueceu sua senha?</a>
-                <a href="null">Nao possui cadastro?Faca um agora.</a>
-            </div>
-
-        </div>
+        <form action="">
+            <label htmlFor="login">Login</label>
+            <input type="text" name="login" id="loginId" />
+            <label htmlFor="senha">Senha</label>
+            <input type="password" name="senha" id="senhaId" />
+            <button type="submit">Enviar</button>
+        </form>
     )
 }
