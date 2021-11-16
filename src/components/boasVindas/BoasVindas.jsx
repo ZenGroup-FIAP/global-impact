@@ -12,6 +12,9 @@ export default function BoasVindas() {
 
             <FlexBoxBoasVindas>
                 <Btn>
+                    <p>Dashboard</p>
+                </Btn>
+                <Btn>
                     <p>Alimentos</p>
                 </Btn>
                 <Btn>
