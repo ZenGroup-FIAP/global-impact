@@ -1,13 +1,12 @@
 import React from 'react'
-import Cadastro from './components/cadastro/Cadastro.jsx'
-import Login from './components/login/Login.jsx'
+import BoasVindas from './components/boasVindas/BoasVindas'
 import { Container } from './styled.js'
 
 
 export default function App() {
   return (
-    <Container>
-      <Login />
-    </Container>
+    <div>
+      <BoasVindas />
+    </div>
   )
 }
