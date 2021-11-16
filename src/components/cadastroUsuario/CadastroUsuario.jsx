@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Cadastro() {
+export default function CadastroUsuarios() {
     return (
         <form action="">
             <label htmlFor="login">Login</label>
