@@ -101,6 +101,18 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .BtnFlexEnd {
+        align-self: flex-end;
+    }
+
+    .BtnHover:hover {
+        background: #243A77;
+        
+        p {
+            color: #FFF;
+        }
+    }
 `
 
 export const BgPadrao = styled.div`
@@ -149,7 +161,7 @@ export const Btn = styled.div`
     }
 `
 
-export const BtnAzul = styled.div`
+export const BtnAzul = styled.button`
     padding: 5px 10px;
     border: 3px solid #243A77;
     width: 200px;
@@ -197,9 +209,5 @@ export const Form = styled.form`
 
     select {
         width: 526px;
-    }
-
-    .FlexBtn {
-        align-self: flex-end;
     }
 `

@@ -22,7 +22,7 @@ export default function CadastroAlimentos() {
                 <option value="114" key="mercado4">mercado4</option>
             </select>
 
-            <BtnAzul className="FlexBtn" type="submit">
+            <BtnAzul className="BtnHover BtnFlexEnd" type="submit">
                 <p>Enviar</p>
             </BtnAzul>
         </Form>
