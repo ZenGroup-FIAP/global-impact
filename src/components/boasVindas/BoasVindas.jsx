@@ -18,9 +18,6 @@ export default function BoasVindas() {
                     <p>Alimentos</p>
                 </Btn>
                 <Btn>
-                    <p>Usuários</p>
-                </Btn>
-                <Btn>
                     <p>Supermercados</p>
                 </Btn>
             </FlexBoxBoasVindas>

@@ -2,8 +2,8 @@ import {React, useState} from 'react'
 import {Link, Switch, Route} from 'react-router-dom'
 import CadastroAlimentos from '../cadastroAlimentos/CadastroAlimentos'
 import CadastroSupermercados from '../cadastroSupermercado/CadastroSupermercado'
-import CadastroUsuarios from '../cadastroUsuario/CadastroUsuario'
-import { ButtonHeaderStyle, HeaderStyled } from '../../styled'
+import BoasVindas from '../boasVindas/BoasVindas'
+import { ButtonHeaderStyle, HeaderStyled, Container } from '../../styled'
 
 export default function Menu() {
     const [toggle, setToggle] = useState("off")
@@ -25,16 +25,16 @@ export default function Menu() {
         <HeaderStyled>
                 <nav>
                     <ul>
+                        <li><Link to="/">Home</Link></li>
                         <li><Link to="/cadastroalimentos">Alimentos</Link></li>
-                        <li><Link to="/cadastrousuarios">Usuarios</Link></li>
                         <li><Link to="/cadastrosupermercados">Supermercados</Link></li>
                     </ul>
                 </nav>
                 <ButtonHeaderStyle className={toggle} onClick={() => switchToggle()}>Menu</ButtonHeaderStyle>
                 <nav className={menuResponsive}>
                     <ul>
+                        <li><Link to="/" onClick={() => switchToggle()}>Home</Link></li>
                         <li><Link to="/cadastroalimentos" onClick={() => switchToggle()}>Alimentos</Link></li>
-                        <li><Link to="/cadastrousuarios" onClick={() => switchToggle()}>Usuarios</Link></li>
                         <li><Link to="/cadastrosupermercados" onClick={() => switchToggle()}>Supermercados</Link></li>
                     </ul>
                 </nav>
@@ -43,15 +43,19 @@ export default function Menu() {
                     <Switch>
 
                         <Route path="/cadastroalimentos">
-                            <CadastroAlimentos />
-                        </Route>
-
-                        <Route path="/cadastrousuarios">
-                            <CadastroSupermercados />
+                            <Container>
+                                <CadastroAlimentos />
+                            </Container>
                         </Route>
 
                         <Route path="/cadastrosupermercados">
-                            <CadastroUsuarios />
+                            <Container>
+                            <CadastroSupermercados />
+                            </Container>
+                        </Route>
+
+                        <Route path="/">
+                            <BoasVindas />
                         </Route>
 
                     </Switch>

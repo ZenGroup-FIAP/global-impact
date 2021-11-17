@@ -95,7 +95,12 @@ export const ButtonHeaderStyle = styled.button`
 ` 
 
 export const Container = styled.div`
-    background-color: gray;
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 export const BgPadrao = styled.div`
@@ -141,5 +146,60 @@ export const Btn = styled.div`
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
         line-height: 25px;
+    }
+`
+
+export const BtnAzul = styled.div`
+    padding: 5px 10px;
+    border: 3px solid #243A77;
+    width: 200px;
+    text-align: center;
+    margin-top: 40px;
+
+    p {
+        color: #243A77;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+    }
+`
+
+/* Form */
+
+export const Titulo = styled.h1`
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    line-height: 70px;
+    margin-top: 70px;
+`
+
+export const Form = styled.form`
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        margin: 20px 0 5px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    input, select {
+        width: 500px;
+        text-align: left;
+        border: 3px solid #243A77;
+        padding: 5px 10px;
+    }
+
+    select {
+        width: 526px;
+    }
+
+    .FlexBtn {
+        align-self: flex-end;
     }
 `
