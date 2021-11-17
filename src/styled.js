@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const HeaderStyled = styled.header`
-    background-color: #17d19c;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #243A77;
     color: #fff;
     display: flex;
     justify-content: space-around;
@@ -86,11 +87,11 @@ export const HeaderStyled = styled.header`
 `
 
 export const ButtonHeaderStyle = styled.button`
-    background-color: #17d19c;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #243A77;
     color: #fff;
     border: 2px solid #fff;
     font-size: 24px;
-    border-radius: 7px;
 ` 
 
 export const Container = styled.div`
