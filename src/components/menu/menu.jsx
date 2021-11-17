@@ -3,6 +3,7 @@ import {Link, Switch, Route} from 'react-router-dom'
 import CadastroAlimentos from '../cadastroAlimentos/CadastroAlimentos'
 import CadastroSupermercados from '../cadastroSupermercado/CadastroSupermercado'
 import BoasVindas from '../boasVindas/BoasVindas'
+import Painel from '../painel/Painel'
 import { ButtonHeaderStyle, HeaderStyled, Container } from '../../styled'
 
 export default function Menu() {
@@ -26,6 +27,7 @@ export default function Menu() {
                 <nav>
                     <ul>
                         <li><Link to="/">Home</Link></li>
+                        <li><Link to="/painel">Painel</Link></li>
                         <li><Link to="/cadastroalimentos">Alimentos</Link></li>
                         <li><Link to="/cadastrosupermercados">Supermercados</Link></li>
                     </ul>
@@ -34,6 +36,7 @@ export default function Menu() {
                 <nav className={menuResponsive}>
                     <ul>
                         <li><Link to="/" onClick={() => switchToggle()}>Home</Link></li>
+                        <li><Link to="/painel" onClick={() => switchToggle()}>Painel</Link></li>
                         <li><Link to="/cadastroalimentos" onClick={() => switchToggle()}>Alimentos</Link></li>
                         <li><Link to="/cadastrosupermercados" onClick={() => switchToggle()}>Supermercados</Link></li>
                     </ul>
@@ -50,7 +53,13 @@ export default function Menu() {
 
                         <Route path="/cadastrosupermercados">
                             <Container>
-                            <CadastroSupermercados />
+                                <CadastroSupermercados />
+                            </Container>
+                        </Route>
+
+                        <Route path="/painel">
+                            <Container>
+                                <Painel />
                             </Container>
                         </Route>
 

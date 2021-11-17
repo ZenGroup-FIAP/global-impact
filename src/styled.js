@@ -108,7 +108,7 @@ export const Container = styled.div`
 
     .BtnHover:hover {
         background: #243A77;
-        
+
         p {
             color: #FFF;
         }
@@ -210,4 +210,11 @@ export const Form = styled.form`
     select {
         width: 526px;
     }
+`
+
+/* Listagem */
+
+export const FlexBoxListagem = styled.div`
+    max-width: 1200px;
+    display: flex;
 `
