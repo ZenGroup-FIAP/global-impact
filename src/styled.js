@@ -7,15 +7,17 @@ export const HeaderStyled = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 5px;
+    padding: 20px;
     font-weight: bold;
 
     a {
         color: #fff;
+        text-decoration: none;
     }
 
     ul li a:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        font-weight: bold;
     }
 
     ul {
@@ -24,7 +26,7 @@ export const HeaderStyled = styled.header`
     }
 
     ul li {
-        margin: 0 10px;
+        margin: 0 20px;
     }
 
     button {
@@ -79,7 +81,7 @@ export const HeaderStyled = styled.header`
 
         .open ul li:hover {
             width: 100%;
-            background-color: #15B184;
+            background-color: #444;
         }
 
 
@@ -177,13 +179,15 @@ export const BtnAzul = styled.button`
     }
 `
 
-/* Form */
+/* Form Cadastro */
 
 export const Titulo = styled.h1`
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     line-height: 70px;
-    margin-top: 70px;
+    margin: 70px auto 40px auto;
+    text-align: center;
+    font-weight: bold;
 `
 
 export const Form = styled.form`
@@ -214,7 +218,40 @@ export const Form = styled.form`
 
 /* Listagem */
 
-export const FlexBoxListagem = styled.div`
-    max-width: 1200px;
+export const FlexBoxListagem = styled.ul`
+    width: 800px;
     display: flex;
+    justify-content: space-around;
+    border: 1px solid #243A77;
+    border-bottom: none;
+`
+
+export const FlexBoxListagemLast = styled.ul`
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #243A77;
+`
+
+export const FlexBoxListagemItemTitulo = styled.li`
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px;
+    text-transform: uppercase;
+`
+
+export const FlexBoxListagemItem = styled.li`
+    padding: 10px;
+    
+    .AcoesBtn:hover {
+        color: black;
+    }
+`
+
+export const AcoesBtn = styled.button`
+    border: none;
+    background: none;
+    color: #555;
 `
