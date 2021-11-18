@@ -115,11 +115,18 @@ export const Container = styled.div`
             color: #FFF;
         }
     }
+
+    .tabela {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 `
 
 export const BgPadrao = styled.div`
     background-color: #243A77;
     width: 100%;
+    padding-bottom: 60px;
 `
 
 export const FlexBoxLogo = styled.div`
@@ -131,6 +138,7 @@ export const FlexBoxLogo = styled.div`
 
     img {
         max-width: 100%;
+        margin: 40px;
     }
 
     h1 {
@@ -145,8 +153,13 @@ export const FlexBoxBoasVindas = styled.div`
     display: flex;
     margin: 0 auto;
     max-width: 1000px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `
 
 export const Btn = styled.div`
@@ -218,19 +231,33 @@ export const Form = styled.form`
 
 /* Listagem */
 
+export const FlexBoxTeste = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
+
 export const FlexBoxListagem = styled.ul`
-    width: 800px;
+    width: 50vw;
     display: flex;
     justify-content: space-around;
     border: 1px solid #243A77;
     border-bottom: none;
+
+    @media only screen and (max-width: 740px) {
+        width: 400px;
+    }
 `
 
 export const FlexBoxListagemLast = styled.ul`
-    width: 800px;
+    width: 50vw;
     display: flex;
     justify-content: space-around;
     border: 1px solid #243A77;
+    margin-bottom: 60px;
+
+    @media only screen and (max-width: 740px) {
+        width: 400px;
+    }
 `
 
 export const FlexBoxListagemItemTitulo = styled.li`
@@ -248,6 +275,12 @@ export const FlexBoxListagemItem = styled.li`
     .AcoesBtn:hover {
         color: black;
     }
+
+    a {
+        border: none;
+        background: none;
+        color: #555;
+    }
 `
 
 export const AcoesBtn = styled.button`
@@ -255,3 +288,6 @@ export const AcoesBtn = styled.button`
     background: none;
     color: #555;
 `
+
+
+/* Footer */

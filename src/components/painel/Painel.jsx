@@ -1,152 +1,129 @@
 import React from 'react'
-import { Titulo, FlexBoxListagem, FlexBoxListagemItemTitulo, FlexBoxListagemItem, FlexBoxListagemLast, AcoesBtn } from '../../styled'
+import {Link} from 'react-router-dom'
+import { Container, BgPadrao, FlexBoxLogo, FlexBoxBoasVindas, Btn, Titulo, FlexBoxListagem, FlexBoxListagemItemTitulo, FlexBoxListagemItem, FlexBoxListagemLast, AcoesBtn } from '../../styled'
 import { RiDeleteBin2Fill, RiEdit2Fill } from "react-icons/ri"
+import Logo from '../../img/logo/logo.svg'
 
 export default function Painel() {
 
 
     return (
         <>
-            <section className="tabela">
-                <Titulo>Supermercados</Titulo>
-                <FlexBoxListagem className="colunas">
-                    <FlexBoxListagemItemTitulo>Nome</FlexBoxListagemItemTitulo>
-                    <FlexBoxListagemItemTitulo>ID</FlexBoxListagemItemTitulo>
-                    <FlexBoxListagemItemTitulo>Lista de produtos</FlexBoxListagemItemTitulo>
-                    <FlexBoxListagemItemTitulo>Ações</FlexBoxListagemItemTitulo>
-                </FlexBoxListagem>
+            <BgPadrao>
+                <FlexBoxLogo>
+                    <img src={Logo} alt="Logo" />
+                    <h1>Gerenciar:</h1>
+                </FlexBoxLogo>
 
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagem className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagem>
-                <FlexBoxListagemLast className="valores">
-                    <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>223</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
-                    <FlexBoxListagemItem>
-                        <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                        <AcoesBtn className="AcoesBtn"><RiEdit2Fill /></AcoesBtn>
-                    </FlexBoxListagemItem>
-                </FlexBoxListagemLast>
+                <FlexBoxBoasVindas>
+                    <Btn>
+                        <p>Alimentos</p>
+                    </Btn>
+                    <Btn>
+                        <p>Supermercados</p>
+                    </Btn>
+                </FlexBoxBoasVindas>
+            </BgPadrao>
 
-            </section>
-            <section>
+            <Container>
+                <section className="tabela">
+                    <Titulo>Supermercados</Titulo>
+                    <FlexBoxListagem className="colunas">
+                        <FlexBoxListagemItemTitulo>Nome</FlexBoxListagemItemTitulo>
+                        <FlexBoxListagemItemTitulo>ID</FlexBoxListagemItemTitulo>
+                        <FlexBoxListagemItemTitulo>Lista de produtos</FlexBoxListagemItemTitulo>
+                        <FlexBoxListagemItemTitulo>Ações</FlexBoxListagemItemTitulo>
+                    </FlexBoxListagem>
 
-            </section>
+                    <FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem>
+                    <FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem><FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem><FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem><FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem><FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem><FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem><FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem><FlexBoxListagem className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagem>
+                    <FlexBoxListagemLast className="valores">
+                        <FlexBoxListagemItem>Extra</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>223</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>Lista de produtos</FlexBoxListagemItem>
+                        <FlexBoxListagemItem>
+                            <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
+                            <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                        </FlexBoxListagemItem>
+                    </FlexBoxListagemLast>
+
+                </section>
+                <section>
+
+                </section>
+            </Container>
         </>
     )
 }
