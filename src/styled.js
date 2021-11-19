@@ -231,11 +231,6 @@ export const Form = styled.form`
 
 /* Listagem */
 
-export const FlexBoxTeste = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-`
-
 export const FlexBoxListagem = styled.ul`
     width: 50vw;
     display: flex;
@@ -267,11 +262,15 @@ export const FlexBoxListagemItemTitulo = styled.li`
     line-height: 18px;
     padding: 10px;
     text-transform: uppercase;
+    width: 12.5vw;
+    text-align: center;
 `
 
 export const FlexBoxListagemItem = styled.li`
     padding: 10px;
-    
+    width: 12.5vw;
+    text-align: center;
+
     .AcoesBtn:hover {
         color: black;
     }
