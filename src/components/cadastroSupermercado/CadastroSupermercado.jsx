@@ -30,7 +30,6 @@ export default function CadastroSupermercados(props) {
 
     const handleSubmit = async e => {
         e.preventDefault()
-        console.log(novo)
         fetch(urlBase+"/rest/supermercado/"+(codigo ? codigo : ""), {
             method: metodo,
             headers: {
@@ -38,8 +37,7 @@ export default function CadastroSupermercados(props) {
             },
             body: JSON.stringify(novo)
         }).then(() => {
-            console.log("Funciona porfavo")
-            //window.location = "/"
+            window.location = "/"
         })
     }
 
