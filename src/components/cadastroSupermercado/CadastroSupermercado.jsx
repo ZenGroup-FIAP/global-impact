@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Form, Titulo, BtnAzul, Container } from '../../styled'
+import { urlBase } from '../../utils'
 
 export default function CadastroSupermercados(props) {
 
@@ -12,7 +13,9 @@ export default function CadastroSupermercados(props) {
 
     const [novo, setNovo] = useState({
         id: codigo,
-        nome: ""
+        nome: "",
+        usuarios: [],
+        alimentos: []
     })
 
     let metodo = "post"
@@ -25,10 +28,10 @@ export default function CadastroSupermercados(props) {
         setNovo({...novo, [e.target.name]: e.target.value})
     }
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault()
-
-        fetch("/rest/supermercado/"+(codigo ? codigo : ""), {
+        console.log(novo)
+        fetch(urlBase+"/rest/supermercado/"+(codigo ? codigo : ""), {
             method: metodo,
             headers: {
                 "Content-Type": "application/json"
@@ -42,7 +45,7 @@ export default function CadastroSupermercados(props) {
 
     useEffect(() => {
         if (codigo) {
-            fetch("/rest/supermercado/"+codigo)
+            fetch(urlBase+"/rest/supermercado/"+codigo)
                 .then(resp => {
                     return resp.json()
                 }).then(data=> {
@@ -50,17 +53,19 @@ export default function CadastroSupermercados(props) {
                 })
         }
     }, [codigo])
-
+    
     return (
         <Container>
         <Titulo>
             Cadastro de Supermercados
         </Titulo>
-        <Form onSubmit={handleSubmit}>
-            <label htmlFor="nomeSupermercado">Nome do supermercado</label>
-            <input type="text" name="nomeSupermercado" id="nomeSupermercadoId" placeholder={novo.nome} onChange={handleChange} />
+        <Form>
+            <label htmlFor="nome">Nome do supermercado</label>
+            <input type="text" name="nome" id="nomeSupermercadoId" placeholder={novo.nome} onChange={handleChange} />
+            <input type="hidden" name="usuarios" value={novo.usuarios} />
+            <input type="hidden" name="alimentos" value={novo.alimentos} />
 
-            <BtnAzul className="BtnHover BtnFlexEnd" type="submit">
+            <BtnAzul className="BtnHover BtnFlexEnd" onClick={handleSubmit}>
                 <p>Enviar</p>
             </BtnAzul>
             <Link to="/">Cancelar</Link>

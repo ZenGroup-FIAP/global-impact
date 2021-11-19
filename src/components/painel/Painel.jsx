@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { Container, BgPadrao, FlexBoxLogo, FlexBoxBoasVindas, Btn, Titulo, FlexBoxListagem, FlexBoxListagemItemTitulo, FlexBoxListagemItem, FlexBoxListagemLast, AcoesBtn } from '../../styled'
 import { RiDeleteBin2Fill, RiEdit2Fill } from "react-icons/ri"
+import { urlBase } from '../../utils'
 import Logo from '../../img/logo/logo.svg'
 
 export default function Painel() {
@@ -10,7 +11,7 @@ export default function Painel() {
     let selected = true
 
     useEffect(() => 
-        fetch("/rest/supermercado").then((resp) => {
+        fetch(urlBase+"/rest/supermercado").then((resp) => {
             return resp.json()
         }).then((resp) => {
             console.log(resp)
@@ -20,7 +21,7 @@ export default function Painel() {
         }),[])
 
     const handleDelete = (id) => {
-        fetch("/rest/supermercado/"+id, {
+        fetch(urlBase+"/rest/supermercado/"+id, {
             method: "delete"
         }).then(() => {
             window.location = "/"
@@ -73,7 +74,7 @@ export default function Painel() {
                                 }}>Alimentos</button></FlexBoxListagemItem>
                             <FlexBoxListagemItem>
                                 <Link className="AcoesBtn" to="/" onClick={() => handleDelete(mercado.id)}><RiDeleteBin2Fill /></Link>
-                                <Link title="Editar" className="AcoesBtn" to={`/editar/${mercado.id}`}><RiEdit2Fill /></Link>
+                                <Link title="Editar" className="AcoesBtn" to={`/editar/supermercado/${mercado.id}`}><RiEdit2Fill /></Link>
                             </FlexBoxListagemItem>
                         </FlexBoxListagem>
                     ))}
