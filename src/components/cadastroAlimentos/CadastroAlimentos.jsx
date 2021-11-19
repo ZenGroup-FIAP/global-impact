@@ -77,13 +77,13 @@ export default function CadastroAlimentos(props) {
             <label htmlFor="quantidade">Quantidade em Kg</label>
             <input type="number" name="quantidade" id="quantidadeId" placeholder={novo.quantidade} onChange={handleChange} />
             <label htmlFor="fabricacao">Data de fabricação</label>
-            <input type="date" name="fabricacao" id="fabricacaoId" onChange={handleChange} />
+            <input type="date" name="fabricacao" id="fabricacaoId" placeholder={novo.fabricacao} onChange={handleChange} />
             <label htmlFor="validade">Data de vencimento</label>
-            <input type="date" name="validade" id="validadeId" onChange={handleChange}/>
+            <input type="date" name="validade" id="validadeId" placeholder={novo.validade} onChange={handleChange}/>
             <label htmlFor="idSupermercado">Supermercado</label>
             <select name="idSupermercado" id="supermercadoAlimentoId" onChange={handleChange}>
                 {supermercados.map((mercado) => (
-                    <option value={mercado.id} key={mercado.nome}>{mercado.nome}</option>
+                    <option value={mercado.id} key={mercado.nome}   >{mercado.nome}</option>
                 ))}
             </select>
 

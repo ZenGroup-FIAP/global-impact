@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import { Container, BgPadrao, FlexBoxLogo, FlexBoxBoasVindas, Btn, Titulo, FlexBoxListagem, FlexBoxListagemItemTitulo, FlexBoxListagemItem, FlexBoxListagemLast, AcoesBtn } from '../../styled'
+import { Container, BgPadrao, FlexBoxLogo, FlexBoxListagemAlimentos, FlexBoxListagemItemAlimentos, Titulo, FlexBoxListagem, FlexBoxListagemItemTitulo, FlexBoxListagemLastAlimentos, FlexBoxListagemItem, FlexBoxListagemLast } from '../../styled'
 import { RiDeleteBin2Fill, RiEdit2Fill } from "react-icons/ri"
 import { urlBase } from '../../utils'
 import Logo from '../../img/logo/logo.svg'
@@ -42,17 +42,7 @@ export default function Painel() {
             <BgPadrao>
                 <FlexBoxLogo>
                     <img src={Logo} alt="Logo" />
-                    <h1>Gerenciar:</h1>
                 </FlexBoxLogo>
-
-                <FlexBoxBoasVindas>
-                    <Btn>
-                        <p>Alimentos</p>
-                    </Btn>
-                    <Btn>
-                        <p>Supermercados</p>
-                    </Btn>
-                </FlexBoxBoasVindas>
             </BgPadrao>
 
             <Container>
@@ -83,14 +73,38 @@ export default function Painel() {
                         <p>São Paulo, Brasil, FIAP - ZenGroup - 1TDSG</p>
                     </FlexBoxListagemLast>
                 </section>
-                <section>
+                <section className="tabela">
+                    <Titulo>Alimentos</Titulo>
+                    <FlexBoxListagemAlimentos className="colunas">
+                        <FlexBoxListagemItemTitulo>Nome</FlexBoxListagemItemTitulo>
+                        <FlexBoxListagemItemTitulo>Quantidade</FlexBoxListagemItemTitulo>
+                        <FlexBoxListagemItemTitulo>Fabricação</FlexBoxListagemItemTitulo>
+                        <FlexBoxListagemItemTitulo>Validade</FlexBoxListagemItemTitulo>
+                        <FlexBoxListagemItemTitulo>Ações</FlexBoxListagemItemTitulo>
+                    </FlexBoxListagemAlimentos>
                     {selected ? 
                     alimentos.map((alimento) => (
-                        <h1>{alimento.nome}</h1>
+                        <FlexBoxListagemAlimentos className="valores">
+                            <FlexBoxListagemItemAlimentos>{alimento.nome}</FlexBoxListagemItemAlimentos>
+                            <FlexBoxListagemItemAlimentos>{alimento.quantidade}</FlexBoxListagemItemAlimentos>
+                            <FlexBoxListagemItemAlimentos>{alimento.fabricacao}</FlexBoxListagemItemAlimentos>
+                            <FlexBoxListagemItemAlimentos>{alimento.validade}</FlexBoxListagemItemAlimentos>
+                            <FlexBoxListagemItemAlimentos>
+                                <Link className="AcoesBtn" to="/" onClick={() => handleDelete(alimento.id)}><RiDeleteBin2Fill /></Link>
+                                <Link title="Editar" className="AcoesBtn" to={`/editar/alimento/${alimento.id}`}><RiEdit2Fill /></Link>
+                            </FlexBoxListagemItemAlimentos>
+                        </FlexBoxListagemAlimentos>
                         )) : false}
                     {
-                        !selected ? <p>....</p> : false
+                        !selected ? 
+                        <FlexBoxListagemAlimentos>
+                            <FlexBoxListagemItemAlimentos>Vazio...</FlexBoxListagemItemAlimentos>
+                        </FlexBoxListagemAlimentos>
+                         : false
                     }
+                    <FlexBoxListagemLastAlimentos>
+                        <p>São Paulo, Brasil, FIAP - ZenGroup - 1TDSG</p>
+                    </FlexBoxListagemLastAlimentos>
                 </section>
             </Container>
         </>

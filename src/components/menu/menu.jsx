@@ -26,8 +26,8 @@ export default function Menu() {
                 <nav>
                     <ul>
                         <li><Link to="/">Painel</Link></li>
-                        <li><Link to="/incluir/alimento">Alimentos</Link></li>
-                        <li><Link to="/incluir/supermercado">Supermercados</Link></li>
+                        <li><Link to="/incluir/alimento">Cadastrar alimento</Link></li>
+                        <li><Link to="/incluir/supermercado">Cadastrar supermercado</Link></li>
                     </ul>
                 </nav>
                 <ButtonHeaderStyle className={toggle} onClick={() => switchToggle()}>Menu</ButtonHeaderStyle>
