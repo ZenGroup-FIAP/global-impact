@@ -73,7 +73,7 @@ export default function Painel() {
                                 }}>Alimentos</button></FlexBoxListagemItem>
                             <FlexBoxListagemItem>
                                 <Link className="AcoesBtn" to="/" onClick={() => handleDelete(mercado.id)}><RiDeleteBin2Fill /></Link>
-                                <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                                <Link title="Editar" className="AcoesBtn" to={`/editar/${mercado.id}`}><RiEdit2Fill /></Link>
                             </FlexBoxListagemItem>
                         </FlexBoxListagem>
                     ))}

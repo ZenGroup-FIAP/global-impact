@@ -1,9 +1,9 @@
 import React from 'react'
-import { Form, BtnAzul, Titulo } from '../../styled'
+import { Form, BtnAzul, Titulo, Container } from '../../styled'
 
 export default function CadastroAlimentos() {
     return (
-        <>
+        <Container>
         <Titulo>
             Cadastro de Alimentos
         </Titulo>
@@ -26,6 +26,6 @@ export default function CadastroAlimentos() {
                 <p>Enviar</p>
             </BtnAzul>
         </Form>
-        </>
+        </Container>
     )
 }
