@@ -19,6 +19,16 @@ export default function Painel() {
             console.log(erro)
         }),[])
 
+    const handleDelete = (id) => {
+        fetch("/rest/supermercado/"+id, {
+            method: "delete"
+        }).then(() => {
+            window.location = "/"
+        }).catch((erro) => {
+            console.log(erro)
+        })
+    }
+
 
     if (alimentos.length === 0) {
         selected = false
@@ -62,8 +72,8 @@ export default function Painel() {
                                 setAlimentos(mercado.alimentos)
                                 }}>Alimentos</button></FlexBoxListagemItem>
                             <FlexBoxListagemItem>
-                                <AcoesBtn className="AcoesBtn"><RiDeleteBin2Fill /></AcoesBtn>
-                                <Link className="AcoesBtn" to="/formsupermercados"><RiEdit2Fill /></Link>
+                                <Link className="AcoesBtn" to="/" onClick={() => handleDelete(mercado.id)}><RiDeleteBin2Fill /></Link>
+                                <Link title="Editar" className="AcoesBtn" to={`/editar/${mercado.id}`}><RiEdit2Fill /></Link>
                             </FlexBoxListagemItem>
                         </FlexBoxListagem>
                     ))}
