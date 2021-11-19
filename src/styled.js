@@ -231,11 +231,6 @@ export const Form = styled.form`
 
 /* Listagem */
 
-export const FlexBoxTeste = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-`
-
 export const FlexBoxListagem = styled.ul`
     width: 50vw;
     display: flex;
@@ -288,6 +283,30 @@ export const AcoesBtn = styled.button`
     background: none;
     color: #555;
 `
+/* Flexbox alimentos */
 
+export const FlexBoxListagemAlimentos = styled.ul`
+    width: 45vw;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #243A77;
+    border-bottom: none;
+
+    @media only screen and (max-width: 740px) {
+        width: 350px;
+    }
+`
+
+export const FlexBoxListagemLastAlimentos = styled.ul`
+    width: 45vw;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #243A77;
+    margin-bottom: 60px;
+
+    @media only screen and (max-width: 740px) {
+        width: 350px;
+    }
+`
 
 /* Footer */

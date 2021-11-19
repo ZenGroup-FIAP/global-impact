@@ -26,34 +26,36 @@ export default function Menu() {
                 <nav>
                     <ul>
                         <li><Link to="/">Painel</Link></li>
-                        <li><Link to="/incluir/alimento">Alimentos</Link></li>
-                        <li><Link to="/incluir">Supermercados</Link></li>
+                        <li><Link to="/formalimentos">Alimentos</Link></li>
+                        <li><Link to="/formsupermercados">Supermercados</Link></li>
                     </ul>
                 </nav>
                 <ButtonHeaderStyle className={toggle} onClick={() => switchToggle()}>Menu</ButtonHeaderStyle>
                 <nav className={menuResponsive}>
                     <ul>
                         <li><Link to="/" onClick={() => switchToggle()}>Painel</Link></li>
-                        <li><Link to="/incluir/alimento" onClick={() => switchToggle()}>Alimentos</Link></li>
-                        <li><Link to="incluir" onClick={() => switchToggle()}>Supermercados</Link></li>
+                        <li><Link to="/formalimentos" onClick={() => switchToggle()}>Alimentos</Link></li>
+                        <li><Link to="/formsupermercados" onClick={() => switchToggle()}>Supermercados</Link></li>
                     </ul>
                 </nav>
         </HeaderStyled>
                 <section>
                     <Switch>
-                        <Route path="/incluir/alimento" component={CadastroAlimentos}>
+
+                        <Route path="/formalimentos">
+                            <Container>
+                                <CadastroAlimentos />
+                            </Container>
                         </Route>
 
-                        <Route path="/editar/alimento/:id" component={CadastroAlimentos}>
+                        <Route path="/formsupermercados">
+                            <Container>
+                                <CadastroSupermercados />
+                            </Container>
                         </Route>
 
-                        <Route path="/incluir" component={CadastroSupermercados}>
-                        </Route>
-
-                        <Route path="/editar/:id" component={CadastroSupermercados}>
-                        </Route>
-
-                        <Route path="/" component={Painel}>
+                        <Route path="/">
+                            <Painel />
                         </Route>
 
                     </Switch>
