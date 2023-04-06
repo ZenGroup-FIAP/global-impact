@@ -121,12 +121,24 @@ export const Container = styled.div`
         flex-wrap: wrap;
         flex-direction: column;
     }
+
+    small {
+        color: #FFF;
+        font-family: Arial;
+    }
 `
 
 export const BgPadrao = styled.div`
     background-color: #243A77;
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
+`
+
+export const BgFooter = styled.div`
+    background-color: #243A77;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 110px;
 `
 
 export const FlexBoxLogo = styled.div`
@@ -288,5 +300,45 @@ export const AcoesBtn = styled.button`
     color: #555;
 `
 
+/* Flexbox alimentos */
+
+export const FlexBoxListagemAlimentos = styled.ul`
+    width: 65vw;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #243A77;
+    border-bottom: none;
+
+    @media only screen and (max-width: 740px) {
+        width: 350px;
+    }
+`
+
+export const FlexBoxListagemLastAlimentos = styled.ul`
+    width: 65vw;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #243A77;
+    margin-bottom: 60px;
+
+    @media only screen and (max-width: 740px) {
+        width: 350px;
+    }
+`
+
+export const FlexBoxListagemItemAlimentos = styled.li`
+    padding: 10px;
+    text-align: center;
+
+    .AcoesBtn:hover {
+        color: black;
+    }
+
+    a {
+        border: none;
+        background: none;
+        color: #555;
+    }
+`
 
 /* Footer */
